@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <script src="../build/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="example"></div>
+
+    <script type="text/babel">
+        var MyComponent=React.createClass({
+            getInitialState:function () {
+                return {ejected:true}
+            },
+            handleClick:function (event) {
+                this.setState({
+                    ejected: !this.state.ejected
+                })
+            },
+            render:function () {
+                var ejected = this.state.ejected;
+                return (
+                    <div>
+                        <div className={ejected ? "hide" : "show"} >我就是个弹出框</div>
+                        <input type="button" value="点击我有惊喜" onClick={this.handleClick}/>
+                    </div>
+                )
+            }
+        })
+
+        ReactDOM.render(
+            <MyComponent/>,
+            document.getElementById('example')
+        )
+    </script>
+</body>
+</html>

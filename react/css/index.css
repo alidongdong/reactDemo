@@ -1,0 +1,10 @@
+.show{
+    display: block;
+    width: 500px;
+    height:500px;
+    border: 1px solid black;
+    text-align: center;
+}
+.hide{
+    display: none;
+}

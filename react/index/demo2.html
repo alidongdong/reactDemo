@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <script src="../build/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/demo2.css">
+</head>
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+        var AComponent=React.createClass({
+            render:function () {
+                return <ul id="screen">
+                    <li>
+                        <span>
+                            定点类型：
+                            <select ></select>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            联系单编号：
+                            <select ></select>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            交易方式：
+                            <select ></select>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            采购组织：
+                            <select ></select>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            状态：
+                            <select ></select>
+                        </span>
+                    </li>
+                </ul>
+            }
+        })
+
+        var BComponent=React.createClass({
+            save:function () {
+                alert('save..')
+            },
+            modal:function () {
+               alert('XXXXX')
+            } ,
+            render:function () {
+                return <div id="functions">
+                    <ul >
+                        <li onClick={this.save} className="preservation">保存</li>
+                        <li id="template">
+                           选择模板&nbsp;
+                            <select >
+                                <option >模板1</option>
+                                <option >模板2</option>
+                                <option >模板3</option>
+                                <option >模板4</option>
+                                <option >模板5</option>
+                                <option >模板6</option>
+                            </select>
+                        </li>
+                        <li onClick={this.modal}>
+                            自定义搜索
+                        </li>
+                        <li>
+                            重置
+                        </li>
+                        <li id="searh" >搜索</li>
+                    </ul>
+                </div>
+            }
+        })
+        var CComponent=React.createClass({
+            render:function () {
+                return <div id="content">
+                    <ul id="content_outline">
+                        <li className="active">全部</li>
+                        <li>已上架</li>
+                        <li>已下架</li>
+                        <li>已冻结</li>
+                        <li id="export">导出</li>
+                    </ul>
+                    <ul id="content_main">
+                        <li>
+                            <input type="checkbox" className="check"/>
+                            <ul id="content_title">
+                                <li className="long">定点类型</li>
+                                <li className="long">联系单编号</li>
+                                <li>交易方式</li>
+                                <li >联系单名臣</li>
+                                <li className="long">采购组织</li>
+                                <li>状态</li>
+                                <li>创建日期</li>
+                                <li>创建人</li>
+                                <li>操作人</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul id="content_details">
+                                <li className="content_list">
+                                    <input type="checkbox" className="check"/>
+                                    <ul>
+                                        <li className="long">公共租贷001</li>
+                                        <li className="long">公共租贷类型</li>
+                                        <li>1000.00</li>
+                                        <li>1000.00</li>
+                                        <li className="long">XXX资源管理中心</li>
+                                        <li>待提交</li>
+                                        <li>2017-05-21</li>
+                                        <li>李俊</li>
+                                        <li><a href="#">编辑</a></li>
+                                    </ul>
+                                </li>
+                                <li className="content_list">
+                                    <input type="checkbox" className="check"/>
+                                    <ul>
+                                        <li className="long">公共租贷001</li>
+                                        <li className="long">公共租贷类型</li>
+                                        <li>1000.00</li>
+                                        <li>1000.00</li>
+                                        <li className="long">XXX资源管理中心</li>
+                                        <li>待提交</li>
+                                        <li>2017-05-21</li>
+                                        <li>李俊</li>
+                                        <li><a href="#">编辑</a></li>
+                                    </ul>
+                                </li>
+                                <li className="content_list">
+                                    <input type="checkbox" className="check"/>
+                                    <ul>
+                                        <li className="long">公共租贷001</li>
+                                        <li className="long">公共租贷类型</li>
+                                        <li>1000.00</li>
+                                        <li>1000.00</li>
+                                        <li className="long">XXX资源管理中心</li>
+                                        <li>待提交</li>
+                                        <li>2017-05-21</li>
+                                        <li>李俊</li>
+                                        <li><a href="#">编辑</a></li>
+                                    </ul>
+                                </li>
+                                <li className="content_list">
+                                    <input type="checkbox" className="check"/>
+                                    <ul>
+                                        <li className="long">公共租贷001</li>
+                                        <li className="long">公共租贷类型</li>
+                                        <li>1000.00</li>
+                                        <li>1000.00</li>
+                                        <li className="long">XXX资源管理中心</li>
+                                        <li>待提交</li>
+                                        <li>2017-05-21</li>
+                                        <li>李俊</li>
+                                        <li><a href="#">编辑</a></li>
+                                    </ul>
+                                </li>
+                                <li className="content_list">
+                                    <input type="checkbox" className="check"/>
+                                    <ul>
+                                        <li className="long">公共租贷001</li>
+                                        <li className="long">公共租贷类型</li>
+                                        <li>1000.00</li>
+                                        <li>1000.00</li>
+                                        <li className="long">XXX资源管理中心</li>
+                                        <li>待提交</li>
+                                        <li>2017-05-21</li>
+                                        <li>李俊</li>
+                                        <li><a href="#">编辑</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            }
+        })
+
+        var CustomSearch=React.createClass({
+                render:function () {
+                    return <div id="CustomSearch">
+                        <AComponent></AComponent>
+                        <BComponent></BComponent>
+                        <CComponent></CComponent>
+                    </div>
+                }
+        })
+        ReactDOM.render(
+            <CustomSearch/>,
+            document.getElementById('example')
+        )
+    </script>
+</body>
+</html>
